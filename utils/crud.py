@@ -20,3 +20,11 @@ def remove_user(users)-> None:
     for user in users:
         if user['name']==kogo_szukasz:
             users.remove(user)
+
+def update_user(users) -> None:
+    edytuj_uzytkownika = input("Kogo chcesz usunąć:")
+    for user in users:
+        if user['name'] == edytuj_uzytkownika:
+            user['name'] = input("podaj nowe imie:")
+            user['surname'] = input("podaj nowe nazwisko:")
+            user['liczba'] = input("podaj liczbe postow:")
