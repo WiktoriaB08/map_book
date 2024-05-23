@@ -88,6 +88,7 @@ def update_user(i) -> None:
     users[i].posts = entry_posts.get()
     users[i].location = entry_location.get()
     users[i].cords = users[i].get_coordinates()
+    users[i].marker.delete()
     users[i].marker = map_widget.set_marker(users[i].cords[0], users[i].cords[1], text=f"{users[i].location}")
 
     display_users()
